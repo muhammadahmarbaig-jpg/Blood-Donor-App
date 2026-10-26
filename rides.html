@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rides - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card wide-box">
+      <div id="back-button-mount"></div>
+      <p id="success-message" class="alert alert-success page-hidden"></p>
+      <p id="error-message" class="alert alert-error page-hidden"></p>
+
+      <h2>Pick &amp; Drop Rides</h2>
+
+      <div id="donor-request-section" class="page-hidden">
+        <h3>Request a Pickup</h3>
+        <form id="request-ride-form">
+          <label for="pickupAddress">Pickup Address</label>
+          <input type="text" id="pickupAddress" placeholder="Where should the rider pick you up?" required>
+          <label for="dropAddress">Drop Address</label>
+          <input type="text" id="dropAddress" placeholder="Where are you going? (e.g. the society's location)" required>
+          <label for="requestedTime">Date &amp; Time</label>
+          <input type="datetime-local" id="requestedTime" required>
+          <label for="notes">Notes (optional)</label>
+          <input type="text" id="notes" placeholder="Anything the rider should know">
+          <button type="submit"><span class="material-icons">directions_car</span>Request Ride</button>
+        </form>
+
+        <h3>My Rides</h3>
+        <table class="details-table" id="donor-rides-table"></table>
+        <p id="no-donor-rides-message" class="page-hidden">No rides requested yet.</p>
+      </div>
+
+      <div id="rider-section" class="page-hidden">
+        <h3>Available Ride Requests In Your City</h3>
+        <table class="details-table" id="available-rides-table"></table>
+        <p id="no-available-rides-message" class="page-hidden">No pending ride requests in your city right now.</p>
+
+        <h3>My Accepted Rides</h3>
+        <table class="details-table" id="my-rides-table"></table>
+        <p id="no-my-rides-message" class="page-hidden">You haven't accepted any rides yet.</p>
+      </div>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/rides.js"></script>
+</body>
+</html>

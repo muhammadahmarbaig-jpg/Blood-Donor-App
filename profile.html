@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Profile - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card wide-box">
+      <div id="back-button-mount"></div>
+      <h2>My Profile</h2>
+      <p id="success-message" class="alert alert-success page-hidden"></p>
+      <p id="error-message" class="alert alert-error page-hidden"></p>
+      <table class="details-table" id="profile-table"></table>
+
+      <button type="button" id="edit-profile-btn" style="margin-top: 20px;">
+        <span class="material-icons">edit</span>
+        Edit Profile
+      </button>
+
+      <form id="edit-profile-form" class="page-hidden" style="margin-top: 20px;">
+        <label for="edit-fullName">Full Name</label>
+        <input type="text" id="edit-fullName" required>
+
+        <label for="edit-city">City</label>
+        <input type="text" id="edit-city" required>
+
+        <div id="donor-only-fields" class="page-hidden">
+          <label for="edit-bloodGroup">Blood Group</label>
+          <select id="edit-bloodGroup">
+            <option value="">Select</option>
+            <option value="A+">A+</option><option value="A-">A-</option>
+            <option value="B+">B+</option><option value="B-">B-</option>
+            <option value="O+">O+</option><option value="O-">O-</option>
+            <option value="AB+">AB+</option><option value="AB-">AB-</option>
+          </select>
+          <label for="edit-lastDonationDate">Last Donation Date &amp; Time</label>
+          <input type="datetime-local" id="edit-lastDonationDate">
+          <label for="edit-phoneNumber-donor">Phone Number</label>
+          <input type="text" id="edit-phoneNumber-donor">
+        </div>
+
+        <div id="rider-only-fields" class="page-hidden">
+          <label for="edit-phoneNumber-rider">Phone Number</label>
+          <input type="text" id="edit-phoneNumber-rider">
+          <label for="edit-vehicleInfo">Vehicle Info</label>
+          <input type="text" id="edit-vehicleInfo">
+        </div>
+
+        <button type="submit">Save Changes</button>
+        <button type="button" class="btn-secondary" id="cancel-edit-btn">Cancel</button>
+      </form>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

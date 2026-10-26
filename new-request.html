@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Blood Request - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card">
+      <div id="back-button-mount"></div>
+      <h2>Post a Blood Request</h2>
+      <p id="error-message" class="alert alert-error page-hidden"></p>
+      <form id="new-request-form">
+        <label for="bloodGroup">Blood Group Needed</label>
+        <select id="bloodGroup" required>
+          <option value="">Select</option>
+          <option value="A+">A+</option><option value="A-">A-</option>
+          <option value="B+">B+</option><option value="B-">B-</option>
+          <option value="O+">O+</option><option value="O-">O-</option>
+          <option value="AB+">AB+</option><option value="AB-">AB-</option>
+        </select>
+        <label for="city">City</label>
+        <input type="text" id="city" required>
+        <label for="unitsNeeded">Units Needed</label>
+        <input type="number" id="unitsNeeded" min="1" required>
+        <label for="notes">Notes (optional)</label>
+        <input type="text" id="notes" placeholder="e.g. needed by Friday for surgery">
+        <div class="checkbox-row">
+          <input type="checkbox" id="isEmergency">
+          <label for="isEmergency">Mark as Emergency (shown immediately to every donor)</label>
+        </div>
+        <button type="submit">Post Request</button>
+      </form>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/new-request.js"></script>
+</body>
+</html>

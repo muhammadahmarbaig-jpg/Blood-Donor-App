@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointments - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card wide-box">
+      <div id="back-button-mount"></div>
+      <p id="success-message" class="alert alert-success page-hidden"></p>
+      <p id="error-message" class="alert alert-error page-hidden"></p>
+
+      <h2>Appointments</h2>
+      <div class="stat-pill-row" id="stat-pills"></div>
+
+      <div id="donor-booking-section" class="page-hidden">
+        <h3>Book an Appointment</h3>
+        <form id="book-appointment-form">
+          <label for="societyId">Society</label>
+          <select id="societyId" required><option value="">Select a society</option></select>
+          <label for="appointmentDate">Date &amp; Time</label>
+          <input type="datetime-local" id="appointmentDate" required>
+          <label for="notes">Notes (optional)</label>
+          <input type="text" id="notes" placeholder="Anything the society should know">
+          <button type="submit"><span class="material-icons">event_available</span>Request Appointment</button>
+        </form>
+      </div>
+
+      <h3>Upcoming</h3>
+      <table class="details-table" id="upcoming-appointments-table"></table>
+      <p id="no-upcoming-message" class="page-hidden">No upcoming appointments.</p>
+
+      <h3>Past</h3>
+      <table class="details-table" id="past-appointments-table"></table>
+      <p id="no-past-message" class="page-hidden">No past appointments yet.</p>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/appointments.js"></script>
+</body>
+</html>

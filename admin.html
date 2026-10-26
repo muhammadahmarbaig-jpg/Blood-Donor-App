@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card wide-box">
+      <h2>Admin Panel</h2>
+      <p id="success-message" class="alert alert-success page-hidden"></p>
+      <p id="error-message" class="alert alert-error page-hidden"></p>
+
+      <h3>Pending Approvals</h3>
+      <table class="details-table">
+        <tr><th>Name</th><th>Email</th><th>Account Type</th><th>City</th><th>Blood Group</th><th>Phone</th><th>Requested</th><th>Action</th></tr>
+        <tbody id="pending-accounts"></tbody>
+      </table>
+      <p id="no-pending-message" class="page-hidden">No accounts waiting for approval right now.</p>
+
+      <h3>All Accounts</h3>
+      <table class="details-table">
+        <tr><th>Name</th><th>Email</th><th>Account Type</th><th>City</th><th>Status</th></tr>
+        <tbody id="all-accounts"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

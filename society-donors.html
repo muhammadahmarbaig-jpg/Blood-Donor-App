@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Donors - Blood Bridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="app-bar-mount"></div>
+  <main class="page-content">
+    <div class="mui-card wide-box">
+      <div id="back-button-mount"></div>
+      <h2>Blood Bags Collected</h2>
+      <p><span class="badge-eligible" id="bags-count">0 bags collected so far</span></p>
+      <form id="add-bag-form">
+        <button type="submit"><span class="material-icons">add</span>Add Blood Bag Collected</button>
+      </form>
+      <h2>Donors Attached To You</h2>
+      <table class="details-table">
+        <tr><th>Name</th><th>Email (Contact)</th><th>Blood Group</th><th>City</th><th>Eligibility</th></tr>
+        <tbody id="attached-donors"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="../js/accountTypes.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/society-donors.js"></script>
+</body>
+</html>
